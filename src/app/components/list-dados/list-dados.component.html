@@ -1,0 +1,17 @@
+<div class="list-row">
+    <div class="col-md-8">
+        <h3>Lista de Dados</h3>
+        <ul class="list-group">
+            <li 
+                class="list-group-item" 
+                *ngFor="let dado of dados; let i = index" 
+                [class.active]="i == indiceAtual"
+                (click)="setDadoAtivo(dado,i)"
+            >
+                Nome: {{ dado.nome }} <br />
+                Email: {{ dado.email }}<br />
+                Telefone: {{ dado.telefone }}<br />
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+        <h2>Cadastrar um dado</h2>
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="nome" 
+                    required 
+                    [(ngModel)]="dado.nome" 
+                    name="nome"         
+                />
+            </div>            
+            <div class="form-group">
+                <label for="nome">E-mail</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="email" 
+                    required 
+                    [(ngModel)]="dado.email" 
+                    name="email"         
+                />
+            </div>            
+            <div class="form-group">
+                <label for="nome">Telefone</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="telefone" 
+                    required 
+                    [(ngModel)]="dado.telefone" 
+                    name="telefone"         
+                />
+            </div>
+            <br />
+            <button (click)="saveDado()" class="btn btn-success" >Salvar</button>
+        </div>
+
+        <div *ngIf="submitted">
+            <h3>Dado salvo com sucesso</h3>
+            <button class="btn-success" (click)="newDado()">Novo Dado</button>
+        </div>
+    </div>
+</div>
